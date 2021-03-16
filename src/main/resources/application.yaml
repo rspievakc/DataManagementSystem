@@ -1,0 +1,19 @@
+server:
+  port : 8080
+
+basePath: /items
+keyspace: items
+
+spring:
+  data:
+    cassandra:
+      keyspaceName: dms
+      contactPoints: localhost
+      port: 9042
+      local-datacenter: "dc1"
+      schemaAction: CREATE_IF_NOT_EXISTS
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.data: DEBUG
